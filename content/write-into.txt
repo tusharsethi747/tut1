@@ -1,0 +1,1 @@
+this is the file , i have writen into it using writeFileSync, my flag is w , so no append allowedthis is the file , i have writen into it using writeFileSync, my flag is a now, thus i appended some data into the file
