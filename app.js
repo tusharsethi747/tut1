@@ -95,10 +95,37 @@ process
 // npm i <packageName>   .. to add a package in the dependencies (local)
 // ex: npm i lodash  
 
-const var1=require(`lodash`);
-const items=[1,[2,[3,4,[5,[6]]]]];
-const var2=var1.flattenDeep(items);
-console.log(var2);  // [1,2,3,4,5,6]
+// const var1=require(`lodash`);
+// const items=[1,[2,[3,4,[5,[6]]]]];
+// const var2=var1.flattenDeep(items);
+// console.log(var2);  // [1,2,3,4,5,6]
+// console.log("hello everyone");
 
 
+// changed the script in package JSON
+// use npm start , instead of node app.js in terminal
+// console.log("this is the first statement");
+// setTimeout(() => {
+//     console.log("this is second statement , inside the timeout func");
+// }, 0);
+// setTimeout(()=>{
+//     console.log("this is new console log")
+// },0)
+// console.log("this is outside settimeout function")
 
+const {readFile,writeFile}=require(`fs`);
+console.log("before the readFile")
+readFile('./content/first.txt','utf8',(err,res)=>{
+    if(err){
+        console.log(err);
+        return;
+    }
+    console.log(res);
+    console.log("the first task has been completed , thanks");
+})
+// var first_txt=readFileSync(`./content/first.txt`,`utf8`);
+// console.log(first_txt);
+console.log("starting next task, i am outside of readFileSynch(callback func)");
+console.log("tushar edited this file")
+
+// i have not added nodemon or any other dependency globally 
